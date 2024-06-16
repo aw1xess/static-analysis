@@ -9,7 +9,7 @@ function WeatherWidget() {
 	useEffect(() => {
 		if (apiKey) {
 			fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+				`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
 			)
 				.then((response) => response.json())
 				.then((data) => setWeather(data));
